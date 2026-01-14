@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Movie Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 900px;
+      background-color: #222;
+    }
+
+    td, th {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    tr:first-child {
+      background-color: red;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sidebar {
+      background-color: brown;
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .sidebar h4 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin: 5px 0;
+    }
+
+    .sidebar a {
+      color: #ffdf91;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Here is the iframe styling */
+    iframe {
+      width: 100%;
+      height: 350px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .footer {
+      background-color: tomato;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .sidebar, .content {
+        display: block;
+        width: 100%;
+      }
+
+      iframe {
+        height: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="2">Movie Home Page</td>
+    </tr>
+
+    <tr class="banner">
+      <td colspan="2">
+        <img src="movie168.jpg" alt="Movie banner">
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sidebar">
+        <h4><a href="index.html">Genre</a></h4>
+        <ul>
+          <li><a href="hrr.html" target="movieFrame">Horror</a></li>
+          <li><a href="comedy.html" target="movieFrame">Comedy</a></li>
+          <li><a href="action.html" target="movieFrame">Action</a></li>
+          <li><a href="sci-fi.html" target="movieFrame">Sci-Fi</a></li>
+        </ul>
+      </td>
+      <td class="content">
+        <iframe name="movieFrame" src="welcome.html"></iframe>
+      </td>
+    </tr>
+
+    <tr>
+      <td colspan="2" class="footer">
+        Enjoy your free time with a lot of vibes!
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

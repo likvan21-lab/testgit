@@ -1,0 +1,129 @@
+* {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 900px;
+      background-color: #222;
+    }
+
+    td, th {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Header row */
+    tr:first-child {
+      background-color: red;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Banner image */
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Left column (Genre) */
+    .sidebar {
+      background-color: brown;
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .sidebar h4 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin: 5px 0;
+      color: #ffdf91;
+    }
+
+    /* Movie image section */
+    .content img {
+      width: 80%;
+      height: auto;
+      max-height: 300px;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: tomato;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px;
+    }
+
+    /* -------- Responsive design -------- */
+    @media (max-width: 768px) {
+      body {
+        padding: 5px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      /* Stack sidebar and image vertically on small screens */
+      .sidebar, .content {
+        display: block;
+        width: 100%;
+      }
+
+      .content img {
+        width: 100%;
+        height: auto;
+      }
+
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      tr {
+        display: block;
+      }
+
+      .footer {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      tr:first-child {
+        font-size: 1rem;
+      }
+
+      .sidebar h4 {
+        text-align: center;
+      }
+
+      .sidebar li {
+        text-align: center;
+      }
+    }

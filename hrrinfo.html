@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Movie Page</title>
+  <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 90%;
+      max-width: 900px;
+      background-color: #222;
+    }
+
+    td, th {
+      border: 1px solid #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* Header row */
+    tr:first-child {
+      background-color: red;
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    /* Banner image */
+    .banner img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Left column (Genre) */
+    .sidebar {
+      background-color: brown;
+      width: 30%;
+      vertical-align: top;
+    }
+
+    .sidebar h4 {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      margin: 5px 0;
+      color: #ffdf91;
+    }
+
+    /* Movie image section */
+    .content img {
+      width: 80%;
+      height: auto;
+      max-height: 300px;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: tomato;
+      color: #fff;
+      font-weight: 600;
+      padding: 10px;
+    }
+
+    /* -------- Responsive design -------- */
+    @media (max-width: 768px) {
+      body {
+        padding: 5px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      /* Stack sidebar and image vertically on small screens */
+      .sidebar, .content {
+        display: block;
+        width: 100%;
+      }
+
+      .content img {
+        width: 100%;
+        height: auto;
+      }
+
+      td {
+        display: block;
+        width: 100%;
+      }
+
+      tr {
+        display: block;
+      }
+
+      .footer {
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      tr:first-child {
+        font-size: 1rem;
+      }
+
+      .sidebar h4 {
+        text-align: center;
+      }
+
+      .sidebar li {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <td colspan="2">🎬 Movie Home Page</td>
+    </tr>
+
+    <tr class="banner">
+      <td colspan="2">
+        <img src="movie168.jpg" alt="Movie banner" ><a href=""><a href="hrrinfo.html"></a>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="sidebar">
+        <h4>Genre</h4>
+        <ul>
+          <li>Horror</li>
+          <li>Comedy</li>
+          <li>Action</li>
+          <li>Sci-Fi</li>
+        </ul>
+      </td>
+      <td class="content">
+
+  <div class="image-row" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin-bottom:20px;">
+    <p>thhis movie base on the true story</p>
+  </div>
+
+  <div class="video-row" style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center;">
+    <iframe width="25%" height="250" 
+    src="https://www.youtube.com/embed/QKHySfXqN0I?si=Ryt93Hy5bBOye2af" 
+    title="Movie 1 Trailer" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"  
+    allowfullscreen style="border-radius: 8px;">
+  </iframe>
+
+    <iframe width="25%" height="250" 
+    src="https://www.youtube.com/embed/NJ66Htmmq4M?si=jFIBnwLU081hlrNc" 
+    title="Movie 1 Trailer" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen style="border-radius: 8px;"></iframe>
+
+    <iframe width="25%" height="250" 
+    src="https://www.youtube.com/embed/QF-oyCwaArU?si=YIWLASEcU3G-lBi3" 
+    title="Movie 3 Trailer" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen style="border-radius: 8px;"></iframe>
+  </div>
+
+</td>
+    </tr>
+
+    <tr>
+      <td colspan="2" class="footer">
+        Enjoy your free time with a lot of vibes!
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
